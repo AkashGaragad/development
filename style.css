@@ -1,0 +1,112 @@
+:root {
+    --Family: [Figtree](https: //fonts.google.com/specimen/Figtree)
+            --Weights:800;
+            --FontSizePara: 16px;
+            --Yellow: hsl(47, 88%, 63%);
+            --White: hsl(0, 0%, 100%);
+            --Gray500: hsl(0, 0%, 42%);
+            --Gray950: hsl(0, 0%, 7%);
+    }
+
+    * {
+        padding: 0;
+        font-family: var(--Family);
+    }
+
+    body {
+        background: var(--Yellow);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .Container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        max-width: 21rem;
+        /* margin: auto; */
+        border: 1px solid var(--Gray950);
+        padding: 2rem;
+        background: var(--White);
+        border-radius: 20px;
+        box-shadow: 11px 9px 5px var(--Gray950);
+    }
+
+
+
+    .Image {
+        margin-bottom: 1rem;
+
+    }
+
+    .Image img {
+        border-radius:10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .Image img:hover {
+        transform: scale(1.1);
+    }
+
+    .Btn_date button {
+        appearance: none;
+        height: 2rem;
+        width: 6rem;
+        background-color: var(--Yellow);
+        font-weight: 800;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .Btn_date button:hover {
+        background-color: hsl(47, 63%, 37%);
+    }
+
+    .date {
+        color:var(--Gray950);
+        font-size: var(--FontSizePara);
+    }
+
+    .info p {
+        color: var(--Gray500);
+        font-size: var(--FontSizePara);
+    }
+
+    .info h2 {
+        color: var(--FontSizePara);
+        font-weight: 800;
+        margin: 0;
+    }
+
+    .Avatar_name {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .Avatar_name h4 {
+        margin-left: 1rem;
+        font-weight: 500;
+    }
+
+    .Avatar_name img {
+        height: 3rem;
+        width: 3rem;
+
+    }
+
+    @media (max-width: 379px) {
+
+        .Container {
+            max-width: 17rem;
+            padding: 1rem;
+        }
+
+        .Image img {
+            width:100%
+        }
+    }
